@@ -2,10 +2,9 @@ class Solution:
 	def isPalinSent(self, s):
 		# code here
 		
-		input = s.replace(" ","")
-		input = input.lower()
+		input = s.lower()
 		
-		validChar = "abcdefghijklmnopqrstuvwxyz"
+		validChar = "abcdefghijklmnopqrstuvwxyz0123456789"
 		
 		validInput = ""
 		for char in input:
@@ -14,7 +13,7 @@ class Solution:
 		        
 		i=0
 		j=len(validInput)-1
-		
+	
 		while j > i:
 		    if validInput[i] != validInput[j]:
 		        return False
